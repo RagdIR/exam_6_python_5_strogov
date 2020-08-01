@@ -5,41 +5,16 @@
 {% block content %}
     <h1>Записи</h1>
     {% for guestbook in guestbooks %}
-        <div class="card">
+        <div class="card mb-1" style="max-width: 30rem;">
           <h5 class="card-header">{{ guestbook.name }} ({{ guestbook.email }})</h5>
           <div class="card-body">
             <p class="card-text">{{ guestbook.text }}</p>
-            <a href="{% url 'guestbook_update' guestbook.pk %}" class="btn btn-primary">Редактировать</a>
-                  <a href="{% url 'guestbook_delete' guestbook.pk %}" class="btn btn-primary">Удалить</a>
+              <a href="{% url 'guestbook_update' guestbook.pk %}"><button class="btn btn-dark">
+                  <i class="fa fa-pencil-square-o"></i> Редактировать</button></a>
+
+              <a href="{% url 'guestbook_delete' guestbook.pk %}"><button class="btn btn-dark">
+                  <i class="fa fa-trash"></i> Удалить</button></a>
           </div>
         </div>
-{#        <div class="row">#}
-{#          <div class="col-sm-6">#}
-{#            <div class="card">#}
-{#              <div class="card-body">#}
-{#                <h5 class="card-title">{{ guestbook.name }} ({{ guestbook.email }})</h5>#}
-{#                <p class="card-text">{{ guestbook.text }}</p>#}
-{#                <a href="{% url 'guestbook_update' guestbook.pk %}" class="btn btn-primary">Редактировать</a>#}
-{#                  <a href="{% url 'guestbook_delete' guestbook.pk %}" class="btn btn-primary">Удалить</a>#}
-{#              </div>#}
-{#            </div>#}
-{#          </div>#}
-{#          <div class="col-sm-6">#}
-{#            <div class="card">#}
-{#              <div class="card-body">#}
-{#                <h5 class="card-title">{{ guestbook.name }} ({{ guestbook.email }})</h5>#}
-{#                <p class="card-text">{{ guestbook.text }}</p>#}
-{#                <a href="{% url 'guestbook_update' guestbook.pk %}" class="btn btn-primary">Редактировать</a>#}
-{#                  <a href="{% url 'guestbook_delete' guestbook.pk %}" class="btn btn-primary">Удалить</a>#}
-{#              </div>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-{#        <div class="card">#}
-{#            <h3>{{ guestbook.name }} ({{ guestbook.email }})</h3>#}
-{#            <p>{{ guestbook.text }}</p>#}
-{#            <p><a href="{% url 'guestbook_update' guestbook.pk %}">Редактировать</a> |#}
-{#                <a href="{% url 'guestbook_delete' guestbook.pk %}">Удалить</a></p>#}
-{#        </div>#}
     {% endfor %}
 {% endblock %}

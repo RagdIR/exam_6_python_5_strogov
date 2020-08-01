@@ -1,12 +1,17 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponseNotAllowed
+from django.utils import timezone
+
 from .models import Guestbook
 from .forms import GuestbookForm
 
 
 def index_view(request):
     is_admin = request.GET.get('is_admin', None)
-    data = Guestbook.objects.all()
+    if is_admin:
+        data = Guestbook.objects.all()
+    else:
+        data = Guestbook.objects.filter(status='active')
     return render(request, 'index.html', context={
         'guestbooks': data
     })

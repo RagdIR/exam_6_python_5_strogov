@@ -12,8 +12,7 @@
     <form action="{% url "guestbook_delete" guestbook.pk  %}" method="post">
         {% csrf_token %}
         <p><input type="submit" value="Да"></p>
-
+    <p><a href="{% url 'index' %}"><button type="button" class="btn btn-dark">Нет</button></a></p>
     </form>
-    <p></p><a href="{% url 'index' %}"><input type="submit" Value="Нет"></a></p>
 
 {% endblock %}

@@ -1,0 +1,44 @@
+[
+{
+  "model": "webapp.guestbook",
+  "pk": 4,
+  "fields": {
+    "name": "Fedor Strogov",
+    "email": "ragdirstrogov@gmail.com",
+    "text": "\u0430\u044b\u0432\u0430\u0432\u044b\u0432\u044b\u0430\u0432\u044b\u0430\u0432\u044b \u044b\u0430 \u044b\u0432\u0430 \u044b\u0432\u0430 \u0432\u044b\u0430\u0432\u044b\u0430 \u0432\u044b\u0430\u0432\u044b\u0430 \u044b\u0432\u0430 \u044b\u0432\u0430 \u044b\u0432\u0430\u044b\u0432",
+    "created_at": "2020-08-01T08:56:18.318Z",
+    "updated_at": "2020-08-01T08:56:18.318Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 5,
+  "fields": {
+    "name": "Derec Mukus",
+    "email": "rec@link.net",
+    "text": "fsdffdfdbdndythntffgdghhjgvhngfbndfg dffd fdg dfg fdgdffg gfdg fdgfdg fdg g dg dfg ghfdg fhfgb mgj hj gj fgg sddasgfdfgdgdf",
+    "created_at": "2020-08-01T09:39:28.116Z",
+    "updated_at": "2020-08-01T09:39:28.116Z",
+    "status": "active"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$PzFSCC0mqtvw$cPKJOGtvzoOjOAAtLahv90WJlHB7vWXETYwkkZAvAR0=",
+    "last_login": "2020-08-01T08:44:12.699Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-08-01T08:43:05.263Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
