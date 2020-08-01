@@ -1,7 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponseNotAllowed
-from django.utils import timezone
-
 from .models import Guestbook
 from .forms import GuestbookForm
 
@@ -11,7 +9,7 @@ def index_view(request):
     if is_admin:
         data = Guestbook.objects.all()
     else:
-        data = Guestbook.objects.filter(status='active')
+        data = Guestbook.objects.filter(status='active').order_by('-created_at')
     return render(request, 'index.html', context={
         'guestbooks': data
     })
@@ -82,3 +80,4 @@ def guestbook_delete_view(request, pk):
         return redirect('index')
     else:
         return HttpResponseNotAllowed(permitted_methods=['GET', 'POST'])
+
