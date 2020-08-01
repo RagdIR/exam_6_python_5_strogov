@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Редактирование товара{% endblock %}
+
+{% block menu %}
+    <li><a href="{% url 'index' %}">Отмена</a></li>
+{% endblock %}
+
+{% block content %}
+    <h1>Редактировать товар</h1>
+
+    {% url "guestbook_update" pk=guestbook.pk as action_url %}
+    {% include 'parts/form.html' with action_url=action_url form_method='post' button_text='Редактировать' %}
+{% endblock %}

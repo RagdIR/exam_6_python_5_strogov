@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Удаление записи{% endblock %}
+{% block menu %}
+    <li><a href="{% url 'index' %}">Отмена</a></li>
+{% endblock %}
+
+{% block content %}
+    <h1>Вы уверены, что хотите удалить запись из гостевой книги?</h1>
+    <p>{{ guestbook.name }} ({{ guestbook.email }}</p>
+    <p>{{ guestbook.text }}</p>
+    <form action="{% url "guestbook_delete" guestbook.pk  %}" method="post">
+        <p><input type="submit"></p>
+    </form>
+
+{% endblock %}

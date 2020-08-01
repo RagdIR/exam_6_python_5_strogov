@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Добавить запись{% endblock %}
+
+{% block content %}
+    <h1>Добавить запись</h1>
+
+    {% url "guestbook_create" as action_url %}
+    {% include 'parts/form.html' with action_url=action_url form_method='post' %}
+{% endblock %}
